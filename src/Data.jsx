@@ -1,17 +1,17 @@
 export const userList = [
     {
-        Title: "Software Engineer",
+        title: "Software Engineer",
         description: "Software engineer skilled in developing scalable, efficient, user-friendly applications.",
         id: 1
     },
     {
-        Title: "Civil Engineer",
+        title: "Civil Engineer",
         description: "Civil engineer experienced in designing and managing infrastructure projects.",
-        id: 1
+        id: 2
     },
     {
-        Title: "Electrical Engineer",
+        title: "Electrical Engineer",
         description: "Electrical engineer skilled in designing and implementing innovative electrical systems.",
-        id: 1
+        id: 3
     }
 ]
