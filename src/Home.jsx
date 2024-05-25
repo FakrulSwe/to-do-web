@@ -6,6 +6,7 @@ import { deleteUser } from './UserReducer';
 const Home = () => {
     const users = useSelector((state) => state.users);
 
+    // Pagination
     const [currentPage, setCurrentPage] = useState(1)
     const recordsPerpage = 5;
     const lastIndex = currentPage * recordsPerpage;
@@ -13,7 +14,7 @@ const Home = () => {
     const records = users.slice(firstIndex, lastIndex);
     const npage = Math.ceil(users.length/recordsPerpage);
     const numbers = [...Array(npage + 1).keys()].slice(1);
-
+    // -------
     const dispatch = useDispatch();
 
     const handleDelete = (id) =>{
@@ -22,7 +23,7 @@ const Home = () => {
     
   return (
     <div>
-        <h2>Crud App with Json Server</h2>
+        <h2 className='paginationbottom pt-3'>To Do Web</h2>
         <Link to="/create" className='btn btn-success my-3'>Create +</Link>
         <table className='table'>
             <thead>

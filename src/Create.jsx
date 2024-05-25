@@ -20,7 +20,7 @@ const Create = () => {
   return (
     <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
         <div className="w-50 border bg-secondary text-white p-5">
-            <h3>Add New Client</h3>
+            <h3>Add New Task</h3>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Title</label>
