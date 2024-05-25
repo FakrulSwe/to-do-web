@@ -40,3 +40,6 @@
   display: flex;
   justify-content: center;
 }
+.validation{
+  color: rgb(255, 0, 0);
+}
