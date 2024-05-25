@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Create = () => {
     const [title,setTitle] = useState('')
-    const [description,setdescription] = useState('')
+    const [description,setDescription] = useState('')
     const users = useSelector((state) => state.users);
 
     const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const Create = () => {
                 </div>
                 <div>
                 <label htmlFor="name">Description</label>
-                    <input type="text" name='Description' className='form-control' placeholder='Enter Description' onChange={ element => setdescription(element.target.value)}/>
+                    <input type="text" name='Description' className='form-control' placeholder='Enter Description' onChange={ element => setDescription(element.target.value)}/>
                 </div><br />
                 <button className='btn btn-info'>Submit</button>
             </form>

@@ -1,10 +1,15 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom';
-
+import { deleteUser } from './UserReducer';
 
 const Home = () => {
     const users = useSelector((state) => state.users);
+    const dispatch = useDispatch();
+
+    const handleDelete = (id) =>{
+        dispatch(deleteUser({id: id}))
+    }
     
   return (
     <div>
@@ -12,7 +17,7 @@ const Home = () => {
         <Link to="/create" className='btn btn-success my-3'>Create +</Link>
         <table className='table'>
             <thead>
-                <tr>
+                <tr>    
                     <th>ID</th>
                     <th>Title</th>
                     <th>Description</th>
@@ -27,7 +32,7 @@ const Home = () => {
                         <td>{user.description}</td>
                         <td>
                             <Link to={`/edit/${user.id}`} className='btn btn-sm btn-primary'>Edit</Link>
-                            <Link className='btn btn-sm btn-danger ms-2'>Delete</Link>
+                            <button onClick={() => handleDelete(user.id)} className='btn btn-sm btn-danger ms-2'>Delete</button>
                         </td>
                     </tr>
                 ))}
